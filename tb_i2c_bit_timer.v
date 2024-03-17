@@ -57,16 +57,6 @@ module tb_i2c_bit_timer(); // module name (same as the file)
   end
 
   //___________________________________________________________________________
-  // Stop Counter Calculation
-  always @(posedge clk)
-    if (stop)
-    stop_cntr<=stop_cntr+1;
-    else if(out)
-    stop_cntr<=0;
-    else if
-    stop_cntr<=stop_cntr;
-
-  //___________________________________________________________________________
   // Test Vectors
 
   initial begin
