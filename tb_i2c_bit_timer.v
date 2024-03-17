@@ -65,10 +65,33 @@ module tb_i2c_bit_timer(); // module name (same as the file)
     reset;                         // puts the DUT in a known stage
     wait_cycles(5);                // waits 5 clock cicles
 
-    $display("[Info- %t] Test Timer", $time);
-    ticks = 1'h01;
+    $display("[Info- %t] Test Timer ticks = 0", $time);
+    ticks = 0;
     stop_cicles = 2;
+    test_polsos(ticks, stop_cicles);
+    v_Expected = ticks + stop_cicles;
+    async_check;
+    check_errors;
 
+    $display("[Info- %t] Test Timer ticks = 1", $time);
+    ticks = 1;
+    stop_cicles = 2;
+    test_polsos(ticks, stop_cicles);
+    v_Expected = ticks + stop_cicles;
+    async_check;
+    check_errors;
+
+    $display("[Info- %t] Test Timer ticks = 8", $time);
+    ticks = 8;
+    stop_cicles = 2;
+    test_polsos(ticks, stop_cicles);
+    v_Expected = ticks + stop_cicles;
+    async_check;
+    check_errors;
+
+    $display("[Info- %t] Test Timer ticks = 15", $time);
+    ticks = 15;
+    stop_cicles = 2;
     test_polsos(ticks, stop_cicles);
     v_Expected = ticks + stop_cicles;
     async_check;
