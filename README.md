@@ -1,1 +1,11 @@
 # DSSD
+
+CREEU UNA CARPETA PER CADA PRÀCTICA I RESPECTEU L'ESTRUCTURA DE FITXERS QUE ES DIUEN AL GUIÓ DE PRÀCTIQUES!!!
+
+DSSD
+|_prac2
+  |_docs
+  |_rtl
+  |_msic
+  |_sdc
+  |_tb
